@@ -4,16 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login"
+    android:background="@drawable/backgroundblue"
     tools:context=".LoginActivity">
+
     <ImageView
         android:id="@+id/login_applogo"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:src="@drawable/applogo"
+        android:layout_width="383dp"
+        android:layout_height="257dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        />
+        android:src="@drawable/fish" />
     <EditText
         android:id="@+id/login_phone_number_input"
         android:layout_width="match_parent"
@@ -101,29 +100,27 @@
         android:id="@+id/admin_panel_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I'm an Admin?"
-        android:layout_alignParentEnd="true"
         android:layout_below="@+id/login_btn"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:layout_alignParentEnd="true"
         android:layout_marginLeft="80dp"
         android:layout_marginEnd="23dp"
-        />
+        android:text="I'm a Wholesaler"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 
     <TextView
         android:id="@+id/not_admin_panel_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I'm not an Admin?"
-        android:layout_alignParentStart="true"
         android:layout_below="@+id/login_btn"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="80dp"
+        android:text="I'm not an Admin?"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_marginLeft="80dp"
-        android:layout_marginStart="25dp"
-        android:visibility="invisible"
-        />
+        android:visibility="invisible" />
 </RelativeLayout>
