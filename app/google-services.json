@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "756184736825",
+    "project_id": "fish2locals-project",
+    "storage_bucket": "fish2locals-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756184736825:android:50b66c841b860cffd019e8",
+        "android_client_info": {
+          "package_name": "com.app.fish2locals"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "756184736825-dbaufn75m3vujomt18isl0oaseqqh7c0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSZ9c73HjPR9QJcYfacoE9uG5YhVLhs9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "756184736825-dbaufn75m3vujomt18isl0oaseqqh7c0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
