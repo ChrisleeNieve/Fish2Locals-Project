@@ -23,13 +23,13 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class AdminNewOrdersActivity extends AppCompatActivity {
+public class WholesalerNewOrdersActivity extends AppCompatActivity {
     private RecyclerView ordersList;
     private DatabaseReference ordersRef;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_new_orders);
+        setContentView(R.layout.activity_wholesaler_new_orders);
         ordersRef = FirebaseDatabase.getInstance().getReference().child("Orders");
         ordersList = findViewById(R.id.orders_list);
         ordersList.setLayoutManager(new LinearLayoutManager(this));
@@ -49,15 +49,15 @@ public class AdminNewOrdersActivity extends AppCompatActivity {
                     protected void onBindViewHolder(@NonNull AdminOrdersViewHolder holder, final int position, @NonNull final AdminOrders model) {
 
                         holder.userName.setText("Name: "+model.getName());
-                        holder.userPhoneNumber.setText("Name: "+model.getPhone());
-                        holder.userTotalPrice.setText("Total Ammount = Rs."+model.getTotalAmount());
-                        holder.userDateTime.setText("Order at: "+model.getDate()+" "+ model.getTime());
+                        holder.userPhoneNumber.setText("Contact: "+model.getPhone());
+                        holder.userTotalPrice.setText("Total Ammount = PHP"+model.getTotalAmount());
+                        holder.userDateTime.setText("Order at: "+model.getDate()); //+" "+ model.getTime()
                         holder.userShippingAddress.setText("Shipping Address: "+model.getAddress()+", "+model.getCity());
                         holder.showOrdersBtn.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
                                 String uID = getRef(position).getKey();
-                                Intent intent = new Intent(AdminNewOrdersActivity.this,AdminUserProductsActivity.class);
+                                Intent intent = new Intent(WholesalerNewOrdersActivity.this, WholesalerUserProductsActivity.class);
                                 intent.putExtra("uid",uID);
                                 startActivity(intent);
                             }
@@ -73,8 +73,8 @@ public class AdminNewOrdersActivity extends AppCompatActivity {
 
                                 };
 
-                                AlertDialog.Builder builder = new AlertDialog.Builder(AdminNewOrdersActivity.this);
-                                builder.setTitle("Have you shipped this order products?");
+                                AlertDialog.Builder builder = new AlertDialog.Builder(WholesalerNewOrdersActivity.this);
+                                builder.setTitle("Have you shipped the ordered products?");
                                 builder.setItems(options, new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {

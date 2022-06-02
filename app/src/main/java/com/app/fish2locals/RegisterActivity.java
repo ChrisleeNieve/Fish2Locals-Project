@@ -8,10 +8,12 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.ActivityNavigator;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -27,6 +29,8 @@ public class RegisterActivity extends AppCompatActivity {
     private Button CreateAccountButton;
     private EditText InputName, InputPhoneNumber, InputPassword;
     private ProgressDialog loadingBar;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,13 +40,18 @@ public class RegisterActivity extends AppCompatActivity {
         InputPassword = (EditText) findViewById(R.id.register_password_input);
         InputPhoneNumber = (EditText) findViewById(R.id.register_phone_number_input);
         loadingBar = new ProgressDialog(this);
+
+
         CreateAccountButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 CreateAccount();
             }
         });
-    }
+
+
+        }
+
     private void CreateAccount(){
         String name = InputName.getText().toString();
         String phone = InputPhoneNumber.getText().toString();
@@ -100,7 +109,6 @@ public class RegisterActivity extends AppCompatActivity {
                             }
                         }
                     });
-
 
 
                 }

@@ -51,7 +51,7 @@ public class CartActivity extends AppCompatActivity{
         NextProcessBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                txtTotalAmount.setText("Total Price = Rs."+String.valueOf(overTotalPrice));
+                txtTotalAmount.setText("Total Price = PHP"+String.valueOf(overTotalPrice));
                 Intent intent = new Intent(CartActivity.this,ConfirmFinalOrderActivity.class);
                 intent.putExtra("Total Price", String.valueOf(overTotalPrice));
                 startActivity(intent);
@@ -75,7 +75,7 @@ public class CartActivity extends AppCompatActivity{
             @Override
             protected void onBindViewHolder(@NonNull CartViewHolder holder, int position, @NonNull final Cart model) {
                 holder.txtProductQuantity.setText("Quantity = "+model.getQuantity());
-                holder.txtProductPrice.setText("Price = "+model.getPrice()+" Rs.");
+                holder.txtProductPrice.setText("Price = PHP "+model.getPrice());
                 holder.txtProductName.setText(model.getPname());
                 int oneTyprProductTPrice = ((Integer.valueOf(model.getPrice())))* Integer.valueOf(model.getQuantity());
                 overTotalPrice = overTotalPrice + oneTyprProductTPrice;
@@ -89,7 +89,7 @@ public class CartActivity extends AppCompatActivity{
                                         "Remove"
                                 };
                         AlertDialog.Builder builder = new AlertDialog.Builder(CartActivity.this);
-                        builder.setTitle("Cart Options: ");
+                        builder.setTitle("Manage Order: ");
                         builder.setItems(options, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
@@ -147,7 +147,7 @@ public class CartActivity extends AppCompatActivity{
                         txtTotalAmount.setText("TDear "+userName+"\n order is shipped successfully.");
                         recyclerView.setVisibility(View.GONE);
                         txtMsg1.setVisibility(View.VISIBLE);
-                        txtMsg1.setText("Congratulations, Your Final order has been shipped successfully. Soon you will received your order at your door step.");
+                        txtMsg1.setText("Congratulations, Your Final order has been shipped successfully. Soon you will receive your order at your door step.");
                         NextProcessBtn.setVisibility(View.GONE);
                         Toast.makeText(CartActivity.this,"You can purchase more products, Once you received your first order",Toast.LENGTH_SHORT).show();
                     }

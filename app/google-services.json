@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "756184736825",
+    "firebase_url": "https://fish2locals-project-default-rtdb.firebaseio.com",
     "project_id": "fish2locals-project",
     "storage_bucket": "fish2locals-project.appspot.com"
   },

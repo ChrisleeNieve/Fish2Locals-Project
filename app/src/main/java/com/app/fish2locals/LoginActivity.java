@@ -54,9 +54,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                LoginButton.setText("Login Admin");
-                AdminLink.setVisibility(View.INVISIBLE);
-                NotAdminLink.setVisibility(View.VISIBLE);
+                LoginButton.setText("Login");
+                AdminLink.setBackgroundResource(R.drawable.buttons);
+                NotAdminLink.setBackground(null);
                 parentDbName = "Admins";
             }
         });
@@ -65,8 +65,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view)
             {
                 LoginButton.setText("Login");
-                AdminLink.setVisibility(View.VISIBLE);
-                NotAdminLink.setVisibility(View.INVISIBLE);
+                NotAdminLink.setBackgroundResource(R.drawable.buttons);
+                AdminLink.setBackground(null);
                 parentDbName = "Users";
             }
         });
@@ -91,8 +91,6 @@ public class LoginActivity extends AppCompatActivity {
             loadingBar.setMessage("Please wait, while we are checking the credentials.");
             loadingBar.setCanceledOnTouchOutside(false);
             loadingBar.show();
-
-
             AllowAccessToAccount(phone, password);
         }
     }
@@ -118,10 +116,10 @@ public class LoginActivity extends AppCompatActivity {
                         {
                             if(parentDbName.equals("Admins"))
                             {
-                                Toast.makeText(LoginActivity.this, "Welcome Admin, you are logged in Successfully...", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, "Welcome Wholesaler, you are logged in Successfully...", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 
-                                Intent intent = new Intent(LoginActivity.this, com.app.fish2locals.AdminCategoryActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, WholesalerCategoryActivity.class);
                                 startActivity(intent);
                             }
                             else if (parentDbName.equals("Users")){

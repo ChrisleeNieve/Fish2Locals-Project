@@ -19,7 +19,7 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class AdminUserProductsActivity extends AppCompatActivity {
+public class WholesalerUserProductsActivity extends AppCompatActivity {
     private RecyclerView productsList;
     RecyclerView.LayoutManager layoutManager;
     private DatabaseReference cartListRef;
@@ -27,7 +27,7 @@ public class AdminUserProductsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_user_products);
+        setContentView(R.layout.activity_wholesaler_user_products);
         userID = getIntent().getStringExtra("uid");
         productsList = findViewById(R.id.products_list);
         productsList.setHasFixedSize(true);
@@ -49,7 +49,7 @@ public class AdminUserProductsActivity extends AppCompatActivity {
             protected void onBindViewHolder(@NonNull CartViewHolder holder, int position, @NonNull Cart model) {
 
                 holder.txtProductQuantity.setText("Quantity = "+model.getQuantity());
-                holder.txtProductPrice.setText("Price = "+model.getPrice()+" Rs.");
+                holder.txtProductPrice.setText("Price = "+model.getPrice()+" PHP");
                 holder.txtProductName.setText(model.getPname());
             }
 

@@ -51,7 +51,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 if (state.equals("Order Placed") || state.equals("Order Shipped")){
-                    Toast.makeText(ProductDetailsActivity.this,"You can add Purchase more product, once your order is shipped or confirmed",Toast.LENGTH_LONG).show();
+                    Toast.makeText(ProductDetailsActivity.this,"You can purchase more products once your order is shipped or confirmed",Toast.LENGTH_LONG).show();
                 }
                 else
                 {

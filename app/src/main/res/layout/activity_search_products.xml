@@ -18,18 +18,18 @@
         <EditText
 
             android:id="@+id/search_product_name"
-            android:layout_width="260dp"
+            android:layout_width="245dp"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="5dp"
-            android:background="@android:color/white"
+            android:background="@color/colorOnSecondary"
             android:hint="Product Name"
             android:padding="9dp"
             android:textColorHint="@color/colorPrimaryDark"
+            android:textColorLink="#000000"
             android:textSize="18dp"
-            android:textStyle="bold"
 
-            />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/search_btn"

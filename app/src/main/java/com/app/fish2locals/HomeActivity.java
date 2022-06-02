@@ -1,14 +1,5 @@
 package com.app.fish2locals;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,8 +7,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.fish2locals.Model.Products;
 import com.app.fish2locals.Prevalent.Prevalent;
@@ -40,7 +41,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     Toolbar toolbar;
     TextView textView;
     private RecyclerView recyclerView;
+    private Button Chatbutton;
     RecyclerView.LayoutManager layoutManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,7 +101,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                     {
                         holder.txtProductName.setText(model.getPname());
                         holder.txtProductDescription.setText(model.getDescription());
-                        holder.txtProductPrice.setText("Price = " + model.getPrice() + "Rs.");
+                        holder.txtProductPrice.setText("Price = PHP " + model.getPrice());
                         Picasso.get().load(model.getImage()).into(holder.imageView);
                         holder.itemView.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -166,7 +169,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             Intent intent = new Intent(HomeActivity.this,CartActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_search) {
-            Intent intent = new Intent(HomeActivity.this,SearchProductsActivity.class);
+            Intent intent = new Intent(HomeActivity.this, SearchProductsActivity.class);
+            startActivity(intent);
+
+        }else if (id == R.id.check_messages) {
+            Intent intent = new Intent(HomeActivity.this, ChatChannel.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_categories) {

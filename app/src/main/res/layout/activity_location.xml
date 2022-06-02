@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/et_source"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/et_destination"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="69dp"
+        android:layout_marginBottom="28dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Enter Your Location"
+        android:padding="12dp"
+        android:textColor="@color/colorOnSecondary"
+        android:textColorHint="@color/colorOnSecondary" />
+
+    <EditText
+        android:id="@+id/et_destination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt_track"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="65dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Enter Buyer Location"
+        android:padding="12dp"
+        android:textColor="@color/colorOnSecondary"
+        android:textColorHint="@color/colorOnSecondary" />
+
+    <Button
+        android:id="@+id/bt_track"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="500dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="301dp"
+        android:text="Locate" />
+
+</RelativeLayout>
+
