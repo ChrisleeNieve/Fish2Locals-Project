@@ -10,7 +10,7 @@ import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class WholesalerCategoryActivity extends AppCompatActivity {
-    private ImageView sweathers;
+    private ImageView fish;
     private ImageView messagesview;
     private Button LogoutBtn, CheckOrdersBtn, ManageOrdersBtn,maps;
 
@@ -63,12 +63,12 @@ public class WholesalerCategoryActivity extends AppCompatActivity {
             }
         });
 
-        sweathers = (ImageView) findViewById(R.id.add_products_button);
-        sweathers.setOnClickListener(new View.OnClickListener() {
+        fish = (ImageView) findViewById(R.id.add_products_button);
+        fish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(WholesalerCategoryActivity.this, WholesalerAddNewProductActivity.class);
-                intent.putExtra("category", "Sweathers");
+                intent.putExtra("category", "Fish");
                 startActivity(intent);
             }
         });

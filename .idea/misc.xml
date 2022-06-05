@@ -66,7 +66,10 @@
         <entry key="..\:/fish2locals/app/src/main/res/drawable/ic_search.xml" value="0.146" />
         <entry key="..\:/fish2locals/app/src/main/res/drawable/side_nav_bar.xml" value="0.146" />
         <entry key="..\:/fish2locals/app/src/main/res/layout/activity_home.xml" value="0.17753623188405798" />
+        <entry key="..\:/fish2locals/app/src/main/res/layout/activity_product_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/fish2locals/app/src/main/res/layout/activity_wholesaler_add_new_product.xml" value="0.20416666666666666" />
         <entry key="..\:/fish2locals/app/src/main/res/layout/content.xml" value="0.17753623188405798" />
+        <entry key="..\:/fish2locals/app/src/main/res/layout/product_items_layout.xml" value="0.20416666666666666" />
         <entry key="..\:/fish2locals/app/src/main/res/layout/toolbar.xml" value="0.17753623188405798" />
         <entry key="..\:/fish2locals/app/src/main/res/menu/main_menu.xml" value="0.20416666666666666" />
       </map>
